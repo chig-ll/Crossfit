@@ -117,8 +117,6 @@ html {
     при появлении / исчезновении скроллбара
    */
   scrollbar-gutter: stable;
-
-  scrollbar-color: #000 #000;
 }
 
 /**
