@@ -46,6 +46,11 @@
     --header-height: 90px;
 }
 
+html {
+    scrollbar-color: var(--color-light-gray)
+    var(--color-dark-gray)
+}
+
 body {
     font-family: var(--font-family-base);
     font-size: 16px;
