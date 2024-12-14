@@ -392,11 +392,14 @@ h6 {
 }
 
 .training-types-item {
+    --trainingTypesItemBgIconSize: clamp(40px, 4.16vw, 80px);
+
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 32px;
-    background: url('/icons/trasparent-arrow-bottom-left.svg') 100% 0/80px no-repeat;
+    background: url('/icons/trasparent-arrow-bottom-left.svg') 100% 0/var(--trainingTypesItemBgIconSize) no-repeat;
+    padding-top: var(--trainingTypesItemBgIconSize);
 }
 
 .training-types-item-title {
@@ -409,6 +412,16 @@ h6 {
 @media (max-width: 1919px) {
     .motivation-card-img {
         margin-block: -20px
+    }
+}
+
+@media (max-width: 1280px) {
+    .training-types-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .training-types-item {
+        row-gap: 24px;
     }
 }
 
@@ -446,6 +459,7 @@ h6 {
         height: auto;
         margin-block: 0;
     }
+    
 }
 
 @media (max-width: 767px) {
@@ -494,4 +508,16 @@ h6 {
         margin-bottom: 20px;
     }
 
+    .training-types-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .training-types-item {
+        row-gap: 18px;
+    }
+
+    .training-types-img {
+        max-width: 120px;
+    }
 }
