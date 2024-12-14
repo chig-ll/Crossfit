@@ -396,6 +396,7 @@ h6 {
     flex-direction: column;
     align-items: center;
     row-gap: 32px;
+    background: url('/icons/trasparent-arrow-bottom-left.svg') 100% 0/80px no-repeat;
 }
 
 .training-types-item-title {
