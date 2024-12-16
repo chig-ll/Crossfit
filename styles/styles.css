@@ -29,6 +29,8 @@
     --color-dark-gray: hsl(0 0% 25.1%);
     --color-light-gray: hsl(0 0% 76.9%);
     --color-dark-alternate: hsl(210 13.6% 8.6%);
+    --color-background-dark: hsla(0 0 0 / 0.3);
+    --color-background-light: hsla(360 100% 100% / 0.3);
 
     --border-radius: 30px;
     --border: 1px solid var(--color-light);
@@ -37,6 +39,7 @@
     --font-family-accent: 'Yantramanav', sans-serif;
 
     --input-height: 54px;
+    --input-bg: 1px solid var(--color-light-gray);
 
     --container-width: 1300px;
     --container-padding-x: 15px;
@@ -112,6 +115,10 @@ h6 {
     color: var(--color-light);
 }
 
+.title-big {
+    font-size: clamp(20px, 3.12vw, 60px);
+}
+
 .title-medium {
     font-weight: 700;
     font-size: clamp(20px, 2.08vw, 40px);
@@ -122,6 +129,12 @@ h6 {
 .backdrop-title {
     position: relative;
     z-index: 200;
+}
+
+.backdrop-title.centered::after {
+    top: -0.55em;
+    left: 50%;
+    translate: -50% 0;
 }
 
 .backdrop-title::before {
@@ -191,8 +204,36 @@ h6 {
 }
 
 .button.transparent:hover {
-    background-color: var(--color-light-gray);
+    background-color: var(--color-background-light);
     color: var(--color-dark);
+}
+
+.button.transparent:hover::after {
+    filter: invert(1);
+} 
+
+.input {
+    width: 100%;
+    height: var(--input-height);
+    padding-inline: 25px;
+    background-color: transparent;
+    color: var(--color-light);
+    border: var(--input-bg);
+    border-radius: var(--border-radius);
+}
+
+.input::placeholder {
+    color: var(--color-light-gray);
+}
+
+.input:hover {
+    border-color: var(--color-light);
+}
+
+.input:focus {
+    color: var(--color-dark);
+    background-color: var(--color-light-gray);
+    outline: none;
 }
 
 .header {
@@ -417,6 +458,9 @@ h6 {
 }
 
 .join-us-video {
+    width: 100%;
+    max-width: 960px;
+    height: auto;
     box-shadow: 20px 20px 40px var(--color-dark);
 }
 
@@ -442,8 +486,8 @@ h6 {
 
 .join-us-video-play-button:hover {
     color: var(--color-dark);
-    border-color: var(--color-light-gray);
-    background-color: var(--color-light-gray);
+    border-color: var(--color-dark);
+    background-color: var(--color-background);
 }
 
 .join-us-video-play-button::after {
@@ -456,6 +500,60 @@ h6 {
 
 .join-us-video-play-button:hover::after {
     filter: invert(1);
+}
+
+.join-us-body {
+    padding-bottom: 150px;
+}
+
+.join-us-title {
+    position: relative;
+    font-size: clamp(67px, 9.37vw, 180px);
+    line-height: 1;
+    text-align: center;
+    margin-top: -0.4em;
+}
+
+.join-us-title::after {
+    content: '';
+    display: inline-block;
+    width: 0.7em;
+    aspect-ratio: 1;
+    background: url('/icons/bold-arrow-down-right.svg') center/contain no-repeat;
+    scale: 1 -1;
+    margin-left: 0.14em;
+}
+
+.join-us-title:not(:last-child) {
+    margin-bottom: 130px ;
+}
+
+.join-us-form-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 8xp;
+}
+
+.join-us-form-header:not(:last-child) {
+    margin-bottom: 52px;
+}
+
+.join-us-form-subtitle{
+    font-size: clamp(10px, 1.04, 20px);
+    line-height: 1.65;
+    text-transform: uppercase;
+    color: var(--color-light);
+}
+
+.join-us-form-body {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.join-us-form-input {
+    max-width: 400px;
 }
 
 /* MEDIA */
@@ -508,6 +606,14 @@ h6 {
         max-width: 30%;
         height: auto;
         margin-block: 0;
+    }
+
+    .join-us-body{
+        padding-bottom: 80px;
+    }
+
+    .join-us-title:not(:last-child) {
+        margin-bottom: 65px;
     }
     
 }
@@ -569,5 +675,27 @@ h6 {
 
     .training-types-img {
         max-width: 120px;
+    }
+
+    .join-us-video-play-button {
+        width: 140px;
+    }
+
+    .join-us-form-subtitle {
+        font-size: 16px;
+    }
+
+    .join-us-form-body {
+        flex-direction: column;
+        row-gap: 15px;
+        align-items: center;
+    }
+
+    .join-us-form-input {
+        width: clamp(200px, 78.22vw, 400px);
+    }
+
+    .join-us-form-button {
+        width: clamp(200px, 78.22vw, 400px);
     }
 }
