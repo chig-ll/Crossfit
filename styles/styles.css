@@ -91,6 +91,11 @@ a:hover {
     padding-inline: var(--container-padding-x);
 }
 
+.container-wide {
+    max-width: 1920px;
+    margin-inline: auto;
+}
+
 .visually-hidden {
     position: absolute !important;
     width: 1px !important;
@@ -132,7 +137,7 @@ h6 {
 }
 
 .backdrop-title.centered::after {
-    top: -0.55em;
+    top: -0.2em;
     left: 50%;
     translate: -50% 0;
 }
@@ -151,10 +156,11 @@ h6 {
     content: attr(data-title);
     position: absolute;
     z-index: -100;
-    top: -0.45em;
+    top: -0.33em;
     left: -0.6em;
     font-family: var(--font-family-accent);
     font-size: 2.8em;
+    line-height: 1;
     color: transparent;
     -webkit-text-stroke: 1px var(--color-light-gray);
     text-stroke: 1px var(--color-light-gray);
@@ -232,7 +238,7 @@ h6 {
 
 .input:focus {
     color: var(--color-dark);
-    background-color: var(--color-light-gray);
+    background-color: var(--color-background-light);
     outline: none;
 }
 
@@ -419,8 +425,6 @@ h6 {
 
 .training-types {
     position: relative;
-    max-width: 1920px;
-    margin-inline: auto;
     padding-top: 70px;
     padding-bottom: 120px;
     background-color: var(--color-dark);
@@ -446,6 +450,10 @@ h6 {
 .training-types-item-title {
     font-size: 16px
     line-height: 1.75;
+}
+
+.join-us {
+    background-color: var(--color-dark-alternate);
 }
 
 .join-us-video-wrapper {
@@ -554,6 +562,42 @@ h6 {
 
 .join-us-form-input {
     max-width: 400px;
+}
+
+.location {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--color-dark);
+}
+
+.location-map-yandex {
+    width: 100%;
+    height: clamp(200px, 31.35, 600px);
+}
+
+.location-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 15px;
+    text-align: center;
+}
+
+.location-body-title.centered::after {
+    top: -0.3em
+}
+
+.location-body-title:not(:last-child) {
+    margin-bottom: 14px;
+}
+
+.location-body-description {
+    max-width: 490px;
+}
+
+.location-body-description:not(:last-child) {
+    margin-bottom: 36px;
 }
 
 /* MEDIA */
