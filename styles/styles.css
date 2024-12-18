@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Heebo';
-    src: url('/fonts/Heebo-Light.woff2') format('woff2');
+    src: url('../fonts/Heebo-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'Heebo';
-    src: url('/fonts/Heebo-Bold.woff2') format('woff2');
+    src: url('../fonts/Heebo-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: 'Yantramanav';
-    src: url('/fonts/Yantramanav-Bold.woff2') format('woff2');
+    src: url('../fonts/Yantramanav-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -149,7 +149,7 @@ h6 {
     right: calc(100% + 8px);
     width: 26px;
     aspect-ratio: 1;
-    background: url('/icons/plus.svg') center/contain no-repeat;
+    background: url('../icons/plus.svg') center/contain no-repeat;
 }
 
 .backdrop-title::after {
@@ -204,7 +204,7 @@ h6 {
     height: 100%;
     aspect-ratio: 1;
     right: 0;
-    background: url('/icons/arrow-button.svg') center/70% no-repeat;
+    background: url('../icons/arrow-button.svg') center/70% no-repeat;
     border: var(--border);
     border-radius: 50%;
 }
@@ -340,7 +340,7 @@ h6 {
     width: clamp(62px, 10.1vw, 194px);
     aspect-ratio: 1;
     margin-right: 30px;
-    background: url(/icons/bold-arrow-down-right.svg) center/contain no-repeat;
+    background: url(../icons/bold-arrow-down-right.svg) center/contain no-repeat;
 }
 
 .banner-title {
@@ -443,7 +443,7 @@ h6 {
     flex-direction: column;
     align-items: center;
     row-gap: 32px;
-    background: url('/icons/trasparent-arrow-bottom-left.svg') 100% 0/var(--trainingTypesItemBgIconSize) no-repeat;
+    background: url('../icons/trasparent-arrow-bottom-left.svg') 100% 0/var(--trainingTypesItemBgIconSize) no-repeat;
     padding-top: var(--trainingTypesItemBgIconSize);
 }
 
@@ -462,7 +462,7 @@ h6 {
     justify-content: center;
     align-items: center;
     padding: 150px 30px;
-    background: url('/images/Join-us/join-us-video-bg.jpg') center/cover no-repeat var(--color-dark-alternate);
+    background: url('../images/Join-us/join-us-video-bg.jpg') center/cover no-repeat var(--color-dark-alternate);
 }
 
 .join-us-video {
@@ -502,7 +502,7 @@ h6 {
     content: '';
     width: 26px;
     aspect-ratio: 1;
-    background: url('/icons/arrow-button.svg') center/contain no-repeat;
+    background: url('../icons/arrow-button.svg') center/contain no-repeat;
     transition-duration: var(--transition-duration);
 }
 
@@ -527,7 +527,7 @@ h6 {
     display: inline-block;
     width: 0.7em;
     aspect-ratio: 1;
-    background: url('/icons/bold-arrow-down-right.svg') center/contain no-repeat;
+    background: url('../icons/bold-arrow-down-right.svg') center/contain no-repeat;
     scale: 1 -1;
     margin-left: 0.14em;
 }
