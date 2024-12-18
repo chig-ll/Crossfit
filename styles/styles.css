@@ -570,13 +570,8 @@ h6 {
     background-color: var(--color-dark);
 }
 
-/* .location-map {
-    height: clamp(200px, 31.35, 600px);
-} */
-
 .location-map-yandex {
     width: 100%;
-    height: clamp(200px, 31.35, 600px);
 }
 
 .location-body {
@@ -748,9 +743,16 @@ h6 {
     }
 
     .location {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .location-map-yandex {
+        height: clamp(300px, 50vh, 600px);
+    }
+
+    .location-body {
+        padding-block: 40px;
     }
 
     .location-body-description:not(:last-child) {
