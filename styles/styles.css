@@ -570,6 +570,10 @@ h6 {
     background-color: var(--color-dark);
 }
 
+/* .location-map {
+    height: clamp(200px, 31.35, 600px);
+} */
+
 .location-map-yandex {
     width: 100%;
     height: clamp(200px, 31.35, 600px);
@@ -741,5 +745,16 @@ h6 {
 
     .join-us-form-button {
         width: clamp(200px, 78.22vw, 400px);
+    }
+
+    .location {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .location-body-description:not(:last-child) {
+        font-size: 12px;
+        margin-bottom: 24px;
     }
 }
