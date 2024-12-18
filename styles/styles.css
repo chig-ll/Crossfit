@@ -204,7 +204,7 @@ h6 {
     height: 100%;
     aspect-ratio: 1;
     right: 0;
-    background: url('/icons/arrow-button.svg') center/70% no-repeat;
+    background: url('../icons/arrow-button.svg') center/70% no-repeat;
     border: var(--border);
     border-radius: 50%;
 }
