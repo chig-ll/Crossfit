@@ -443,9 +443,19 @@ h6 {
     padding-top: var(--trainingTypesItemBgIconSize);
 }
 
+.training-types-item:hover svg {
+    fill: hsl(240 100% 42%);
+}
+
 .training-types-item-title {
     font-size: 16px
     line-height: 1.75;
+    transition-duration: var(--transition-duration);
+}
+
+.training-types-item:hover h3 {
+    color: hsl(240 100% 42%);
+    transition-duration: var(--transition-duration);
 }
 
 .join-us-video-wrapper {
@@ -671,6 +681,10 @@ h6 {
 
     .training-types-item {
         row-gap: 18px;
+    }
+
+    .training-types svg {
+        max-width: 120px;
     }
 
     .training-types-img {
