@@ -745,6 +745,7 @@ h6 {
     .banner-info::before {
         margin-right: 10px;
     }
+
     .motivation-card,
     .motivation-item:nth-child(even) .motivation-card {
         flex-direction: column-reverse;
@@ -781,7 +782,7 @@ h6 {
     }
 
     .section-subtitle {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .join-us-form-body {
