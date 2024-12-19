@@ -93,7 +93,7 @@ a:hover {
 
 .container-wide {
     max-width: 1920px;
-    margin-inline: auto;
+    margin-inline: auto
 }
 
 .visually-hidden {
@@ -137,7 +137,7 @@ h6 {
 }
 
 .backdrop-title.centered::after {
-    top: -0.2em;
+    top: -0.55em;
     left: 50%;
     translate: -50% 0;
 }
@@ -149,18 +149,17 @@ h6 {
     right: calc(100% + 8px);
     width: 26px;
     aspect-ratio: 1;
-    background: url('../icons/plus.svg') center/contain no-repeat;
+    background: url('/icons/plus.svg') center/contain no-repeat;
 }
 
 .backdrop-title::after {
     content: attr(data-title);
     position: absolute;
     z-index: -100;
-    top: -0.33em;
+    top: -0.45em;
     left: -0.6em;
     font-family: var(--font-family-accent);
     font-size: 2.8em;
-    line-height: 1;
     color: transparent;
     -webkit-text-stroke: 1px var(--color-light-gray);
     text-stroke: 1px var(--color-light-gray);
@@ -238,7 +237,7 @@ h6 {
 
 .input:focus {
     color: var(--color-dark);
-    background-color: var(--color-background-light);
+    background-color: var(--color-light-gray);
     outline: none;
 }
 
@@ -340,7 +339,7 @@ h6 {
     width: clamp(62px, 10.1vw, 194px);
     aspect-ratio: 1;
     margin-right: 30px;
-    background: url(../icons/bold-arrow-down-right.svg) center/contain no-repeat;
+    background: url(/icons/bold-arrow-down-right.svg) center/contain no-repeat;
 }
 
 .banner-title {
@@ -425,6 +424,8 @@ h6 {
 
 .training-types {
     position: relative;
+    max-width: 1920px;
+    margin-inline: auto;
     padding-top: 70px;
     padding-bottom: 120px;
     background-color: var(--color-dark);
@@ -447,9 +448,19 @@ h6 {
     padding-top: var(--trainingTypesItemBgIconSize);
 }
 
+.training-types-item:hover svg {
+    fill: hsl(240 100% 42%);
+}
+
 .training-types-item-title {
     font-size: 16px
     line-height: 1.75;
+    transition-duration: var(--transition-duration);
+}
+
+.training-types-item:hover h3 {
+    color: hsl(240 100% 42%);
+    transition-duration: var(--transition-duration);
 }
 
 .join-us {
