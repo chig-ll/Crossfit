@@ -149,7 +149,7 @@ h6 {
     right: calc(100% + 8px);
     width: 26px;
     aspect-ratio: 1;
-    background: url('/icons/plus.svg') center/contain no-repeat;
+    background: url('../icons/plus.svg') center/contain no-repeat;
 }
 
 .backdrop-title::after {
