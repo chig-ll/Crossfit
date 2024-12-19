@@ -136,6 +136,13 @@ h6 {
     z-index: 200;
 }
 
+.section-subtitle {
+    font-size: clamp(10px, 1.04vw, 20px);
+    line-height: 1.65;
+    text-transform: uppercase;
+    color: var(--color-light);
+}
+
 .backdrop-title.centered::after {
     top: -0.55em;
     left: 50%;
@@ -558,13 +565,6 @@ h6 {
     margin-bottom: 52px;
 }
 
-.join-us-form-subtitle{
-    font-size: clamp(10px, 1.04, 20px);
-    line-height: 1.65;
-    text-transform: uppercase;
-    color: var(--color-light);
-}
-
 .join-us-form-body {
     display: flex;
     justify-content: center;
@@ -581,7 +581,12 @@ h6 {
     background-color: var(--color-dark);
 }
 
+.location-map {
+    display: block;
+}
+
 .location-map-yandex {
+    display: flex;
     width: 100%;
 }
 
@@ -595,7 +600,7 @@ h6 {
 }
 
 .location-body-title.centered::after {
-    top: -0.3em
+    top: -0.4em
 }
 
 .location-body-title:not(:last-child) {
@@ -608,6 +613,38 @@ h6 {
 
 .location-body-description:not(:last-child) {
     margin-bottom: 36px;
+}
+
+.family {
+    background-color: var(--color-dark-alternate); 
+}
+
+.family-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 7px;
+    text-align: center;
+    padding-top: 130px;
+}
+
+.family-header:not(:last-child) {
+    margin-bottom: 58px;
+}
+
+.family-body {
+    display: flex;
+    column-gap: 26px;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    scrollbar-width: none;
+    overscroll-behavior: contain;
+    
+}
+
+.family-img {
+    scroll-snap-align: start;
+    
 }
 
 /* MEDIA */
@@ -624,6 +661,10 @@ h6 {
 
     .training-types-item {
         row-gap: 24px;
+    }
+
+    .family-img {
+        height: 350px;
     }
 }
 
@@ -739,7 +780,7 @@ h6 {
         width: 140px;
     }
 
-    .join-us-form-subtitle {
+    .section-subtitle {
         font-size: 16px;
     }
 
@@ -774,4 +815,17 @@ h6 {
         font-size: 12px;
         margin-bottom: 24px;
     }
+
+    .family-header {
+        padding-top: 65px;
+    }
+
+    .family-header:not(:last-child) {
+        margin-bottom: 29px;
+    }
+
+    .family-img {
+        height: 175px;
+    }
+
 }
