@@ -677,6 +677,10 @@ h6 {
         padding-inline: 13px;
     }
 
+    .backdrop-title::before {
+        width: clamp(20px, 3.38vw, 6px);
+    }
+
     .header {
         padding-top: 12px;
     }
