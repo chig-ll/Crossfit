@@ -862,6 +862,7 @@ select.input:invalid {
     .colculate-body__table-wrapper__table tfoot td {
         padding-top: 16px;
     }
+}
 
 @media (max-width: 767px) {
     .button {
