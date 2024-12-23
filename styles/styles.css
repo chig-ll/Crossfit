@@ -779,6 +779,32 @@ select.input:invalid {
     padding-bottom: 0;
 }
 
+.footer-main__content {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 8px;
+}
+
+.footer-main__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 15px;
+    column-gap: 62px;
+    padding-top: 140px;
+    padding-bottom: 42px;
+}
+
+.footer-main__header-descripstion {
+    width: 100%;
+    max-width: 970px;
+    font-size: 20px;
+    line-height: 1.65;
+    text-transform: uppercase;
+    color: var(--color-light);
+}
+
+
 /* MEDIA */
 @media (max-width: 1919px) {
     .motivation-card-img {
