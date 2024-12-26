@@ -210,7 +210,7 @@ h6 {
     position: absolute;
     height: var(--input-height);
     width: var(--input-height);
-    right: 0;
+    right: calc(var(--border-width) * -1);
     background: url('../icons/arrow-button.svg') center/70% no-repeat;
     border: var(--border);
     border-radius: 50%;
