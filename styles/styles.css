@@ -1027,10 +1027,10 @@ select.input:invalid {
         row-gap: 30px;
     }
 
-    .footer-main__form {
+/*     .footer-main__form {
         display: flex;
         width: 70%;
-    }
+    } */
 
 }
 
