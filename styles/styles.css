@@ -208,8 +208,8 @@ h6 {
 .button.transparent::after {
     content: '';
     position: absolute;
-    height: 100%;
-    aspect-ratio: 1;
+    height: var(--input-height);
+    width: var(--input-height);
     right: 0;
     background: url('../icons/arrow-button.svg') center/70% no-repeat;
     border: var(--border);
