@@ -1,11 +1,6 @@
 /**
   Нормализация блочной модели
  */
-button {
-  box-sizing: border-box;
-  all: unset;
-}
-
 *,
 ::before,
 ::after {
