@@ -1,6 +1,9 @@
 /**
   Нормализация блочной модели
  */
+button {
+  all: unset;
+}
 *,
 ::before,
 ::after {
@@ -106,9 +109,6 @@ button {
   font: inherit;
 }
 
-button {
-  all: unset;
-}
 
 html {
   /**
