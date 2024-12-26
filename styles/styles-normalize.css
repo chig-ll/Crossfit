@@ -106,6 +106,10 @@ button {
   font: inherit;
 }
 
+button {
+  all: unset;
+}
+
 html {
   /**
     Пригодится в большинстве ситуаций
