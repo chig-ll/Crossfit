@@ -2,8 +2,8 @@
   Нормализация блочной модели
  */
 *,
-*::before,
-*::after {
+::before,
+::after {
   box-sizing: border-box;
 }
 
@@ -47,6 +47,12 @@ body,
   margin-left: 0;
 }
 
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
 /**
   Убираем стандартный маркер маркированному списку,
   у которого есть атрибут class
@@ -55,13 +61,40 @@ body,
   list-style: none;
 }
 
+:where(address[class]) {
+  font-style: normal;
+}
+
 /**
-  Упрощаем работу с изображениями
+  Обнуляем вертикальные внешние отступы параграфа,
+  объявляем локальную переменную для внешнего отступа вниз,
+  чтобы избежать взаимодействие с более сложным селектором
  */
-img {
+p {
+  --paragraphMarginBottom: 24px;
+
+  margin-block: 0;
+}
+
+/**
+  Внешний отступ вниз для параграфа без атрибута class,
+  который расположен не последним среди своих соседних элементов
+ */
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+
+/**
+  Упрощаем работу с изображениями и видео
+ */
+img,
+video {
   display: block;
   max-width: 100%;
+  /* height: auto; */
 }
+
 
 /**
   Наследуем свойства шрифт для полей ввода
@@ -73,6 +106,7 @@ button {
   font: inherit;
 }
 
+
 html {
   /**
     Пригодится в большинстве ситуаций
@@ -80,8 +114,17 @@ html {
    */
   height: 100%;
   /**
-    Плавный скролл
+    Убираем скачок интерфейса по горизонтали
+    при появлении / исчезновении скроллбара
    */
+  scrollbar-gutter: stable;
+}
+
+/**
+  Плавный скролл
+ */
+html,
+:has(:target) {
   scroll-behavior: smooth;
 }
 
@@ -98,11 +141,48 @@ body {
 }
 
 /**
+  Нормализация высоты элемента ссылки при его инспектировании в DevTools
+ */
+a:where([class]) {
+  display: inline-flex;
+}
+
+/**
+  Курсор-рука при наведении на элемент
+ */
+label {
+  cursor: pointer;
+}
+
+/**
+  Приводим к единому цвету svg-элементы
+ */
+[fill] { fill: currentColor }
+[stroke] { stroke: currentColor }
+
+/**
+  Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+ */
+svg * {
+  transition-property: fill, stroke;
+}
+
+/**
+  Приведение рамок таблиц в классический 'collapse' вид
+ */
+:where(table) {
+  border-collapse: collapse;
+  border-color: currentColor;
+}
+
+/**
   Удаляем все анимации и переходы для людей,
   которые предпочитают их не использовать
  */
 @media (prefers-reduced-motion: reduce) {
-  * {
+  *,
+  ::before,
+  ::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
